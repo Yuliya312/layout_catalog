@@ -8,54 +8,60 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px; }
+  .card:hover {
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07); }
+  .card__img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 19px;
+    -ms-flex-item-align: center;
+        align-self: center; }
+  .card__picture {
+    width: 100%;
+    height: 134px;
+    margin: 0 auto;
+    overflow: hidden; }
+  .card__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 5px; }
+  .card-font {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000; }
+  .card__code {
+    margin-bottom: 15px; }
+  .card__about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px; }
+  .card__priсe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 20px; }
+  .card__price-value {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px; }
 
-.card:hover {
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07); }
-
-.card__img {
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 19px;
-  -ms-flex-item-align: center;
-      align-self: center; }
-
-.card__picture {
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden; }
-
-.picture--1 {
-  height: 134px; }
-
-.card__name {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  margin-bottom: 5px; }
-
-.card-font {
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  color: #000; }
-
-.card__code {
-  margin-bottom: 15px; }
-
-.card__about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 20px; }
-
-.card__rating {
+.stars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,40 +69,21 @@
       -ms-flex-align: baseline;
           align-items: baseline;
   height: 15px; }
+  .stars__star {
+    height: 15px;
+    width: 15px;
+    background-image: url("../images/star-active.svg");
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-size: 13px;
+    background-origin: padding-box;
+    padding-right: 4px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box; }
+    .stars__star:last-child {
+      background-image: url("../images/star.svg"); }
 
-.card__rating-star {
-  height: 15px;
-  width: 15px;
-  background-image: url("../images/star-active.svg");
-  background-repeat: no-repeat;
-  background-position: 10% 50%;
-  background-size: 13px;
-  background-origin: padding-box;
-  padding-right: 4px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box; }
-
-.card__rating-star:last-child {
-  background-image: url("../images/star.svg"); }
-
-.card__priсe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-bottom: 20px; }
-
-.card__price-value {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 19px; }
-
-.card__btn {
+.btn {
   height: 40px;
   width: 100%;
   display: inline-block;
@@ -111,17 +98,16 @@
   border-radius: 5px;
   border: none;
   cursor: pointer; }
+  .btn:hover {
+    color: #00acdc;
+    background: #fff;
+    border: 1px solid #00acdc; }
 
-.card__btn:hover {
-  color: #00acdc;
-  background: #fff;
-  border: 1px solid #00acdc; }
-
-.navigation {
+.header {
   background: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
-  .navigation__wraper {
+  .header__wraper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -132,39 +118,46 @@
         -ms-flex-align: center;
             align-items: center;
     padding: 0 50px; }
-  .navigation__logo {
+  .header__logo {
     -ms-flex-item-align: center;
         align-self: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 40px; }
-  .navigation__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .navigation__item:not(:first-child) {
-    margin-left: 20px; }
-  .navigation__link {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    text-transform: uppercase;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: #000;
-    height: 60px; }
-    .navigation__link:hover {
-      color: #00acdc; }
-    .navigation__link:active {
-      color: #00acdc;
-      -webkit-box-shadow: 0 4px 0 #00acdc;
-              box-shadow: 0 4px 0 #00acdc; }
+    height: 40px;
+    margin-right: 20px; }
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.navigation__item:not(:first-child) {
+  margin-left: 20px; }
+
+.navigation__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  height: 60px; }
+  .navigation__link:hover {
+    color: #00acdc; }
+  .navigation__link:active {
+    color: #00acdc;
+    -webkit-box-shadow: 0 4px 0 #00acdc;
+            box-shadow: 0 4px 0 #00acdc; }
 
 .is-active {
   position: relative;
