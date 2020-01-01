@@ -1,8 +1,22 @@
 @charset "UTF-8";
+.cards {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-gap: 50px 48px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center; }
+
+@media screen and (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } }
+
 .card {
   width: 200px;
   padding: 30px 14px 15px;
-  margin: 0 24px 50px;
   background: #fff;
   border: 1px solid #f3f3f3;
   -webkit-box-sizing: border-box;
@@ -188,18 +202,5 @@ ul {
 
 a {
   text-decoration: none; }
-
-.cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 50px; }
 
 /*# sourceMappingURL=main.css.map */
